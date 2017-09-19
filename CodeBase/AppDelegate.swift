@@ -8,15 +8,65 @@
 
 import UIKit
 
+import XCGLogger
+import IQKeyboardManagerSwift
+
+var log: XCGLogger!
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        setupAppearance()
+        // Log config
+        configLogger()
+        // Adding IQKeyboard
+        IQKeyboardManager.sharedManager().enable = true
+        
         return true
+    }
+    
+    func setupAppearance() {
+        
+        // navigation bar
+        UINavigationBar.appearance().barTintColor = UIColor.navbar
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSForegroundColorAttributeName : UIColor.white,
+            NSFontAttributeName: UIFont.medium(size: 16)
+        ]
+        
+        UIBarButtonItem.appearance().setTitleTextAttributes([
+            NSForegroundColorAttributeName : UIColor.white,
+            NSFontAttributeName: UIFont.medium(size: 14)
+            ], for: UIControlState())
+        
+    }
+    
+    func configLogger() {
+        // Create a logger object with no destinations
+        log = XCGLogger(identifier: "advancedLogger", includeDefaultDestinations: false)
+        
+        // Create a destination for the system console log (via NSLog)
+        let systemDestination = AppleSystemLogDestination(identifier: "advancedLogger.systemDestination")
+        
+        // Optionally set some configuration options
+        systemDestination.outputLevel = .debug
+        systemDestination.showLogIdentifier = false
+        systemDestination.showFunctionName = true
+        systemDestination.showThreadName = true
+        systemDestination.showLevel = true
+        systemDestination.showFileName = true
+        systemDestination.showLineNumber = true
+        systemDestination.showDate = true
+        
+        // Add the destination to the logger
+        log.add(destination: systemDestination)
+        
+        log.logAppDetails()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
