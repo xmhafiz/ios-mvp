@@ -13,7 +13,7 @@ struct Repo: Mappable {
     
     var id: Int?
     var owner: User?
-    var name: String?
+    var title: String?
     var description: String?
     
     init?(map: Map) {}
@@ -21,7 +21,7 @@ struct Repo: Mappable {
     mutating func mapping(map: Map) {
         id <- map["id"]
         owner <- map["owner"]
-        name <- map["full_name"]
+        title <- map["full_name"]
         description  <- map["description"]
     }
 }

@@ -24,7 +24,7 @@ class UserListViewCell: UITableViewCell {
         contentView.backgroundColor = .clear
         self.backgroundColor = .clear
         
-        nameLabel.font = UIFont.regular(size: 14)
+        nameLabel.font = UIFont.medium(size: 14)
         
         innerView.rounded(radius: 4)
         profileImageView.rounded(radius: 56/2, borderWidth: 2, borderColor: .lightGray)

@@ -46,7 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2105" y="-559"/>
+            <point key="canvasLocation" x="1996" y="-559"/>
         </scene>
         <!--Users-->
         <scene sceneID="2BP-df-ecG">
@@ -73,6 +73,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="CXf-nB-Ad2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="iiv-Cg-HUo">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -85,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="7" y="-74"/>
         </scene>
-        <!--View Controller-->
+        <!--Repo View-->
         <scene sceneID="aLi-WN-ugf">
             <objects>
-                <viewController id="d00-p8-118" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="d00-p8-118" customClass="RepoView" customModule="CodeBase" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W05-8n-Mrq"/>
                         <viewControllerLayoutGuide type="bottom" id="Afk-xE-g1d"/>
@@ -96,9 +97,30 @@
                     <view key="view" contentMode="scaleToFill" id="avA-a0-iAF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="84N-cE-DEi">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PT7-mN-1CA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="84N-cE-DEi" firstAttribute="centerX" secondItem="avA-a0-iAF" secondAttribute="centerX" id="4jQ-XJ-k25"/>
+                            <constraint firstItem="PT7-mN-1CA" firstAttribute="top" secondItem="W05-8n-Mrq" secondAttribute="bottom" id="59C-5M-C5r"/>
+                            <constraint firstAttribute="trailing" secondItem="PT7-mN-1CA" secondAttribute="trailing" id="JI8-vU-Ekj"/>
+                            <constraint firstItem="Afk-xE-g1d" firstAttribute="top" secondItem="PT7-mN-1CA" secondAttribute="bottom" id="JSZ-e0-iji"/>
+                            <constraint firstItem="84N-cE-DEi" firstAttribute="centerY" secondItem="avA-a0-iAF" secondAttribute="centerY" id="ktR-fK-3D2"/>
+                            <constraint firstItem="PT7-mN-1CA" firstAttribute="leading" secondItem="avA-a0-iAF" secondAttribute="leading" id="xbo-Bz-tQ8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JER-OP-ek1"/>
+                    <connections>
+                        <outlet property="spinner" destination="84N-cE-DEi" id="M0M-gF-lrh"/>
+                        <outlet property="tableView" destination="PT7-mN-1CA" id="z7X-GG-K7x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4UF-hj-mNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

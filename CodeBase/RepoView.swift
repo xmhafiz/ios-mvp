@@ -1,54 +1,53 @@
 //
-//  UsersViewController.swift
+//  RepoView.swift
 //  CodeBase
 //
-//  Created by Hafiz on 18/09/2017.
+//  Created by Hafiz on 19/09/2017.
 //  Copyright © 2017 github. All rights reserved.
 //
 
 import UIKit
 
-protocol UserListInterface {
+protocol RepoListInterface {
     func showLoading()
     func hideLoading()
     func showEmptyView()
-    func reloadList(data: [User])
+    func reloadList(data: [Repo])
 }
 
-class UsersView: UIViewController {
+class RepoView: UIViewController {
 
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
-    var tableData = [User]()
-    let presenter = UserPresenter()
+    var tableData = [Repo]()
+    
+    let presenter = RepoPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // bind this view(controller) with presenter
-        presenter.attachView(view: self)
-        
-        setupView()
+
         setupTable()
+        setupView()
+        
+        presenter.attachView(view: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // fetch data
         presenter.fetchData()
     }
     
     func setupView() {
-        self.title = "Github Users"
+        self.title = "Repositories"
         view.backgroundColor = .background
     }
     
     func setupTable() {
         
         // setup tableview
-        tableView.rowHeight = UserListViewCell.rowHeight
-        
+        tableView.estimatedRowHeight = RepoListViewCell.rowHeight
+        tableView.rowHeight = UITableViewAutomaticDimension
         tableView.backgroundColor = .clear
         tableView.dataSource = self
         tableView.delegate = self
@@ -56,11 +55,11 @@ class UsersView: UIViewController {
         tableView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 16, right: 0)
         
         // cell setup
-        tableView.register(UINib(nibName: UserListViewCell.identifier, bundle: nil), forCellReuseIdentifier: UserListViewCell.identifier)
+        tableView.register(UINib(nibName: RepoListViewCell.identifier, bundle: nil), forCellReuseIdentifier: RepoListViewCell.identifier)
     }
 }
 
-extension UsersView: UITableViewDataSource, UITableViewDelegate {
+extension RepoView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
@@ -68,14 +67,16 @@ extension UsersView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let user = tableData[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: UserListViewCell.identifier) as! UserListViewCell
-        cell.setupCell(user: user)
+        let repo = tableData[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: RepoListViewCell.identifier) as! RepoListViewCell
+        
+        cell.setupCell(repo: repo)
+        
         return cell
     }
 }
 
-extension UsersView: UserListInterface {
+extension RepoView: RepoListInterface {
     func showLoading() {
         tableView.isHidden = true
         spinner.startAnimating()
@@ -91,7 +92,7 @@ extension UsersView: UserListInterface {
         // show some message here
     }
     
-    func reloadList(data: [User]) {
+    func reloadList(data: [Repo]) {
         tableView.isHidden = false
         tableData = data
         tableView.reloadData()
