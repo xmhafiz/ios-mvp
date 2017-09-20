@@ -163,6 +163,7 @@
 				861D201F1F6F4D5E006DEFA0 /* UserDefaults */,
 				861D20191F6F47FB006DEFA0 /* Persistents */,
 				861D203B1F6FCDDC006DEFA0 /* CustomCells */,
+				8632523A1F71F8F40014CE1C /* CustomViews */,
 				861D20151F6F47AA006DEFA0 /* APIManager */,
 				861D20171F6F47CF006DEFA0 /* Models */,
 				861D20161F6F47C7006DEFA0 /* Services */,
@@ -291,6 +292,13 @@
 				863252351F70B14B0014CE1C /* RepoListViewCell.xib */,
 			);
 			name = CustomCells;
+			sourceTree = "<group>";
+		};
+		8632523A1F71F8F40014CE1C /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CustomViews;
 			sourceTree = "<group>";
 		};
 		9E2BA0DED8BCA7E6377EFD9C /* Pods */ = {

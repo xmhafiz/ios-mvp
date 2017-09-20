@@ -1,4 +1,4 @@
-# iOS MVP Project
+# iOS MVP Project with Moya
 iOS project in swift with MVP (Model-View-Presenter) architecture. This example project is integrated with [Github public API](https://developer.github.com/v3/)
 
 ![screenshot](screenshot.png)
@@ -11,16 +11,24 @@ iOS project in swift with MVP (Model-View-Presenter) architecture. This example 
 - Cocoapods
 
 ### Common Pods
-- Moya
-- Rx
-- ObjectMapper
+- [Moya](https://github.com/Moya/Moya)
+- [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper)
+- UserDefaults with [SwiftyUserDefaults](https://github.com/radex/SwiftyUserDefaults)
 
 ### Current Feature:
-- Github users page listing
-- Github repositories
+- Github users page
+- Github repositories page
 
-### To be added
-- Detail repository
+### Todo
+- Pull to refresh
+- Tap to reload (if failed request)
+- Reachability
 - Authentication
 - Unit test
 - etc
+
+### Reference
+- [http://iyadagha.com/using-mvp-ios-swift/](http://iyadagha.com/using-mvp-ios-swift/)
+
+### License
+Licensed under the [MIT license](http://opensource.org/licenses/MIT)
