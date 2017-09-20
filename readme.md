@@ -4,6 +4,9 @@ iOS project in swift with MVP (Model-View-Presenter) architecture. This example 
 ![screenshot](screenshot.png)
 
 ### Specification
+
+![screenshot](pattern.png)
+
 - Architecture: MVP (Model-View-Presenter) + Data Services
 - Xcode 8+
 - Support iOS 9+
