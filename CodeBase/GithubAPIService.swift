@@ -13,7 +13,7 @@ import SwiftyUserDefaults
 // define all endpoints
 // https://github.com/Moya/Moya/blob/master/docs/Examples/Basic.md
 
-let moyaProvider = RxMoyaProvider<GithubAPIService>(endpointClosure: endpointClosure)
+let moyaProvider = RxMoyaProvider<GithubAPIService>()
 
 
 // API documentation 
@@ -23,12 +23,37 @@ enum GithubAPIService {
     case auth(username: String, password: String)
     case getUsers()
     case getUser(username: String)
-    case search(keyword: String, sortBy: String, orderBy: String)
+    case search(keyword: String, sortBy: String?, orderBy: String?)
     case getRepositories()
 }
 
 
 extension GithubAPIService: TargetType {
+    var task: Task {
+        
+        if let requestParameters = parameters {
+            return .requestParameters(parameters: requestParameters, encoding: parameterEncoding)
+        }
+        
+        return .requestPlain
+        
+    }
+    
+    var headers: [String : String]? {
+        switch self {
+        case .auth:
+            return [
+                "Accept" : "application/json"
+            ]
+        default:
+            // add headers with bearer to endpoints above
+            return [
+                "Accept" : "application/json",
+                "Content-Type" : "application/json"
+            ]
+        }
+    }
+    
     
     // set the base url and paths for each endpoints
     var baseURL : URL { return URL(string: APIConstant.baseURL)! }
@@ -71,8 +96,8 @@ extension GithubAPIService: TargetType {
         case .search(let keyword, let sortBy, let orderBy):
             return [
                 "q": keyword,
-                "sort" : sortBy, // followers, repositories, or joined. Default: best match
-                "order" : orderBy // asc or desc
+                "sort" : sortBy ?? "", // followers, repositories, or joined. Default: best match
+                "order" : orderBy ?? "" // asc or desc
             ]
         default:
             return nil
@@ -95,10 +120,6 @@ extension GithubAPIService: TargetType {
         
         return "{}".data(using: String.Encoding.utf8)!
     }
-    
-    var task: Task {
-        return .request
-    }
 }
 
 // this function will be used in below closure
@@ -107,28 +128,4 @@ public func url(route: TargetType) -> String {
     
     log.debug(url)
     return url
-}
-
-// closure with custome headers
-let endpointClosure = { (target: GithubAPIService) -> Endpoint<GithubAPIService> in
-    
-    let endPoint = Endpoint<GithubAPIService>(
-        url: url(route: target),
-        sampleResponseClosure: {.networkResponse(200, target.sampleData)},
-        method: target.method,
-        parameters: target.parameters,
-        parameterEncoding: target.parameterEncoding
-    )
-    
-    switch target {
-    case .auth:
-        return endPoint.adding(newHTTPHeaderFields: [
-            "Accept" : "application/json"
-            ])
-    default:
-        // add headers with bearer to endpoints above
-        return endPoint.adding(newHTTPHeaderFields: [
-            "Accept" : "application/json",
-            "Content-Type" : "application/json"])
-    }
 }

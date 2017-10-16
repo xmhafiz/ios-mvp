@@ -8,12 +8,12 @@ target 'CodeBase' do
     # Pods for CodeBase
     
     # Pods for API service using Moya
-    pod 'Moya/RxSwift'
+    pod 'Moya/RxSwift', '~> 9.0'
     pod 'ObjectMapper'
     pod 'SwiftyJSON'
     # rx
-    pod 'RxSwift', '~> 3.0'
-    pod 'RxCocoa', '~> 3.0'
+    pod 'RxSwift'
+    pod 'RxCocoa'
     
     # Common libraries
     pod 'IQKeyboardManagerSwift'

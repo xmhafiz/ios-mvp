@@ -35,13 +35,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColor.navbar
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [
-            NSForegroundColorAttributeName : UIColor.white,
-            NSFontAttributeName: UIFont.medium(size: 16)
+            NSAttributedStringKey.foregroundColor : UIColor.white,
+            NSAttributedStringKey.font: UIFont.medium(size: 16)
         ]
         
         UIBarButtonItem.appearance().setTitleTextAttributes([
-            NSForegroundColorAttributeName : UIColor.white,
-            NSFontAttributeName: UIFont.medium(size: 14)
+            NSAttributedStringKey.foregroundColor : UIColor.white,
+            NSAttributedStringKey.font: UIFont.medium(size: 14)
             ], for: UIControlState())
         
     }

@@ -19,7 +19,7 @@ class ReposityService {
             .subscribe { event in
                 
                 switch event {
-                case let .next(response):
+                case let .success(response):
                     
                     if response.success {
                         // on success, map to object
@@ -36,11 +36,7 @@ class ReposityService {
                 case let .error(error):
                     log.error(error)
                     callback(false, nil, ErrorMessage.unknownAPIError)
-                    
-                default:
-                    break
                 }
-                
             }
             .addDisposableTo(bag)
     }

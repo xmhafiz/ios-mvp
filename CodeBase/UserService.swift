@@ -18,10 +18,8 @@ class UserService {
             .request(GithubAPIService.getUsers())
             .subscribe { event in
                 
-                
-                
                 switch event {
-                case let .next(response):
+                case let .success(response):
                     
                     log.debug(response)
                     
@@ -40,9 +38,6 @@ class UserService {
                 case let .error(error):
                     log.error(error)
                     callback(false, nil, ErrorMessage.unknownAPIError)
-                    
-                default:
-                    break
                 }
                 
             }
@@ -55,7 +50,7 @@ class UserService {
             .subscribe { event in
                 
                 switch event {
-                case let .next(response):
+                case let .success(response):
                     
                     if response.success {
                         // on success, map to object
@@ -72,9 +67,6 @@ class UserService {
                 case let .error(error):
                     log.error(error)
                     callback(false, nil, ErrorMessage.unknownAPIError)
-                    
-                default:
-                    break
                 }
                 
             }

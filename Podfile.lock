@@ -1,55 +1,55 @@
 PODS:
-  - Alamofire (4.5.0)
-  - IQKeyboardManagerSwift (4.0.13)
-  - Moya/Core (8.0.5):
+  - Alamofire (4.5.1)
+  - IQKeyboardManagerSwift (5.0.4)
+  - Moya/Core (9.0.0):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
-  - Moya/RxSwift (8.0.5):
+  - Moya/RxSwift (9.0.0):
     - Moya/Core
-    - RxSwift (~> 3.0)
+    - RxSwift (~> 3.3)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - ObjectMapper (2.2.8)
-  - Result (3.2.3)
+  - ObjectMapper (3.0.0)
+  - Result (3.2.4)
   - RxCocoa (3.6.1):
     - RxSwift (~> 3.6)
   - RxSwift (3.6.1)
-  - SDWebImage (4.1.0):
-    - SDWebImage/Core (= 4.1.0)
-  - SDWebImage/Core (4.1.0)
+  - SDWebImage (4.1.2):
+    - SDWebImage/Core (= 4.1.2)
+  - SDWebImage/Core (4.1.2)
   - SwiftyJSON (3.1.4)
   - SwiftyUserDefaults (3.0.0)
-  - XCGLogger (5.0.1):
-    - XCGLogger/Core (= 5.0.1)
-  - XCGLogger/Core (5.0.1):
+  - XCGLogger (5.0.5):
+    - XCGLogger/Core (= 5.0.5)
+  - XCGLogger/Core (5.0.5):
     - ObjcExceptionBridging
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
-  - Moya/RxSwift
+  - Moya/RxSwift (~> 9.0)
   - ObjectMapper
-  - RxCocoa (~> 3.0)
-  - RxSwift (~> 3.0)
+  - RxCocoa
+  - RxSwift
   - SDWebImage
   - SwiftyJSON
   - SwiftyUserDefaults
   - XCGLogger (~> 5.0.1)
 
 SPEC CHECKSUMS:
-  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
-  IQKeyboardManagerSwift: fb399c4cddcd8d9bbcd2d0c7c81ed290b61c088e
-  Moya: c37eec09a098ba9991b5a963b291fc5704bdb9ef
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  IQKeyboardManagerSwift: a0592bb636b10a9a1cf75d2b2c61144226226c84
+  Moya: cf5e6ee93af526532f92614004b8ad2ea60fd845
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
-  Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
+  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
   RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
-  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
+  SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
-  XCGLogger: 0b43697155d41e4a1b15fc776f319c2141646b09
+  XCGLogger: 49bceee6dc0c738eae5d6454fdbf800d62256b74
 
-PODFILE CHECKSUM: 4e34c18d86b807e77ee1f4fd407582f3199583cf
+PODFILE CHECKSUM: cb685fc79470dc5342c9c5e14d68d7ee2f53e9e3
 
 COCOAPODS: 1.3.1
