@@ -13,7 +13,7 @@ import SwiftyUserDefaults
 // define all endpoints
 // https://github.com/Moya/Moya/blob/master/docs/Examples/Basic.md
 
-let moyaProvider = RxMoyaProvider<GithubAPIService>()
+let moyaProvider = MoyaProvider<GithubAPIService>()
 
 
 // API documentation 

@@ -14,7 +14,7 @@ class ReposityService {
     static let bag = DisposeBag()
     
     static func getData(callback:@escaping (Bool, [Repo]?, String?) -> Void) {
-        moyaProvider
+        moyaProvider.rx
             .request(GithubAPIService.getRepositories())
             .subscribe { event in
                 
@@ -38,6 +38,6 @@ class ReposityService {
                     callback(false, nil, ErrorMessage.unknownAPIError)
                 }
             }
-            .addDisposableTo(bag)
+            .disposed(by: bag)
     }
 }

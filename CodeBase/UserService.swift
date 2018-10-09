@@ -14,7 +14,7 @@ class UserService {
     static let bag = DisposeBag()
     
     static func getUsers(callback:@escaping (Bool, [User]?, String?) -> Void) {
-        moyaProvider
+        moyaProvider.rx
             .request(GithubAPIService.getUsers())
             .subscribe { event in
                 
@@ -41,11 +41,11 @@ class UserService {
                 }
                 
             }
-            .addDisposableTo(bag)
+            .disposed(by: bag)
     }
     
     static func getUser(username: String, callback:@escaping (Bool, User?, String?) -> Void) {
-        moyaProvider
+        moyaProvider.rx
             .request(GithubAPIService.getUser(username: username))
             .subscribe { event in
                 
@@ -70,6 +70,6 @@ class UserService {
                 }
                 
             }
-            .addDisposableTo(bag)
+            .disposed(by: bag)
     }
 }
