@@ -16,8 +16,6 @@ iOS project in swift with MVP (Model-View-Presenter) architecture with Moya, RxS
 ### Common Pods
 - [Moya+Rx](https://github.com/Moya/Moya)
 - [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper)
-- UserDefaults with [SwiftyUserDefaults](https://github.com/radex/SwiftyUserDefaults)
-- [IQKeyboardManagerSwift](https://github.com/hackiftekhar/IQKeyboardManager) 
 
 ### Current Feature:
 - Github users page
