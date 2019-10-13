@@ -16,7 +16,6 @@
 		861D20081F6F45AB006DEFA0 /* CodeBaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D20071F6F45AB006DEFA0 /* CodeBaseUITests.swift */; };
 		861D201C1F6F4A5D006DEFA0 /* GithubAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D201B1F6F4A5D006DEFA0 /* GithubAPIService.swift */; };
 		861D201E1F6F4A96006DEFA0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D201D1F6F4A96006DEFA0 /* Constant.swift */; };
-		861D20211F6F4D78006DEFA0 /* DefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D20201F6F4D78006DEFA0 /* DefaultsKey.swift */; };
 		861D20231F6F4EA0006DEFA0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D20221F6F4EA0006DEFA0 /* UserService.swift */; };
 		861D20251F6F4EB7006DEFA0 /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D20241F6F4EB7006DEFA0 /* RepositoryService.swift */; };
 		861D20271F6F4F9C006DEFA0 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D20261F6F4F9C006DEFA0 /* Repo.swift */; };
@@ -27,7 +26,6 @@
 		861D20321F6FBD4B006DEFA0 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D20311F6FBD4B006DEFA0 /* UIViewController.swift */; };
 		861D20341F6FBD54006DEFA0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D20331F6FBD54006DEFA0 /* UIView.swift */; };
 		861D20381F6FC282006DEFA0 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D20371F6FC282006DEFA0 /* UsersView.swift */; };
-		861D203A1F6FC2D2006DEFA0 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D20391F6FC2D2006DEFA0 /* UIFont.swift */; };
 		861D203E1F6FCE35006DEFA0 /* UserListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D203C1F6FCE35006DEFA0 /* UserListViewCell.swift */; };
 		861D203F1F6FCE35006DEFA0 /* UserListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 861D203D1F6FCE35006DEFA0 /* UserListViewCell.xib */; };
 		861D20411F6FDE28006DEFA0 /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D20401F6FDE28006DEFA0 /* UserPresenter.swift */; };
@@ -37,6 +35,7 @@
 		863252371F70B14B0014CE1C /* RepoListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 863252351F70B14B0014CE1C /* RepoListViewCell.xib */; };
 		863252391F70B8510014CE1C /* RepoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863252381F70B8510014CE1C /* RepoPresenter.swift */; };
 		865464BF216C8D63003A17C4 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 865464BE216C8D63003A17C4 /* readme.md */; };
+		869646DB2353AC1900798521 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869646DA2353AC1800798521 /* Log.swift */; };
 		B6C6A1F508EED8F612188E22 /* Pods_CodeBaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C37FBED53916CDC233CDE58 /* Pods_CodeBaseTests.framework */; };
 		FB0E47E30D6D930E8981477C /* Pods_CodeBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC975E5EE88B65F46D6604DE /* Pods_CodeBase.framework */; };
 /* End PBXBuildFile section */
@@ -77,7 +76,6 @@
 		861D20091F6F45AB006DEFA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		861D201B1F6F4A5D006DEFA0 /* GithubAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPIService.swift; sourceTree = "<group>"; };
 		861D201D1F6F4A96006DEFA0 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		861D20201F6F4D78006DEFA0 /* DefaultsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsKey.swift; sourceTree = "<group>"; };
 		861D20221F6F4EA0006DEFA0 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		861D20241F6F4EB7006DEFA0 /* RepositoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
 		861D20261F6F4F9C006DEFA0 /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 		861D20311F6FBD4B006DEFA0 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		861D20331F6FBD54006DEFA0 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		861D20371F6FC282006DEFA0 /* UsersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
-		861D20391F6FC2D2006DEFA0 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		861D203C1F6FCE35006DEFA0 /* UserListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewCell.swift; sourceTree = "<group>"; };
 		861D203D1F6FCE35006DEFA0 /* UserListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserListViewCell.xib; sourceTree = "<group>"; };
 		861D20401F6FDE28006DEFA0 /* UserPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPresenter.swift; sourceTree = "<group>"; };
@@ -98,6 +95,7 @@
 		863252351F70B14B0014CE1C /* RepoListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoListViewCell.xib; sourceTree = "<group>"; };
 		863252381F70B8510014CE1C /* RepoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoPresenter.swift; sourceTree = "<group>"; };
 		865464BE216C8D63003A17C4 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = SOURCE_ROOT; };
+		869646DA2353AC1800798521 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		9C37FBED53916CDC233CDE58 /* Pods_CodeBaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeBaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A430ED9F900317D0F502011A /* Pods-CodeBaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBaseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeBaseUITests/Pods-CodeBaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC975E5EE88B65F46D6604DE /* Pods_CodeBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,10 +160,7 @@
 				861D1FEB1F6F45AB006DEFA0 /* Main.storyboard */,
 				861D201A1F6F480B006DEFA0 /* Constans */,
 				861D202C1F6FBCF8006DEFA0 /* Extension */,
-				861D201F1F6F4D5E006DEFA0 /* UserDefaults */,
-				861D20191F6F47FB006DEFA0 /* Persistents */,
 				861D203B1F6FCDDC006DEFA0 /* CustomCells */,
-				8632523A1F71F8F40014CE1C /* CustomViews */,
 				861D20151F6F47AA006DEFA0 /* APIManager */,
 				861D20171F6F47CF006DEFA0 /* Models */,
 				861D20161F6F47C7006DEFA0 /* Services */,
@@ -232,27 +227,12 @@
 			name = ViewPresenters;
 			sourceTree = "<group>";
 		};
-		861D20191F6F47FB006DEFA0 /* Persistents */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Persistents;
-			sourceTree = "<group>";
-		};
 		861D201A1F6F480B006DEFA0 /* Constans */ = {
 			isa = PBXGroup;
 			children = (
 				861D201D1F6F4A96006DEFA0 /* Constant.swift */,
 			);
 			name = Constans;
-			sourceTree = "<group>";
-		};
-		861D201F1F6F4D5E006DEFA0 /* UserDefaults */ = {
-			isa = PBXGroup;
-			children = (
-				861D20201F6F4D78006DEFA0 /* DefaultsKey.swift */,
-			);
-			name = UserDefaults;
 			sourceTree = "<group>";
 		};
 		861D202C1F6FBCF8006DEFA0 /* Extension */ = {
@@ -262,8 +242,8 @@
 				861D202F1F6FBD3F006DEFA0 /* UIColor.swift */,
 				861D20331F6FBD54006DEFA0 /* UIView.swift */,
 				861D20311F6FBD4B006DEFA0 /* UIViewController.swift */,
-				861D20391F6FC2D2006DEFA0 /* UIFont.swift */,
 				861D20421F6FE252006DEFA0 /* String.swift */,
+				869646DA2353AC1800798521 /* Log.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -295,13 +275,6 @@
 				863252351F70B14B0014CE1C /* RepoListViewCell.xib */,
 			);
 			name = CustomCells;
-			sourceTree = "<group>";
-		};
-		8632523A1F71F8F40014CE1C /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = CustomViews;
 			sourceTree = "<group>";
 		};
 		9E2BA0DED8BCA7E6377EFD9C /* Pods */ = {
@@ -530,28 +503,20 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CodeBase/Pods-CodeBase-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
-				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -573,9 +538,9 @@
 				861D20271F6F4F9C006DEFA0 /* Repo.swift in Sources */,
 				861D201E1F6F4A96006DEFA0 /* Constant.swift in Sources */,
 				861D203E1F6FCE35006DEFA0 /* UserListViewCell.swift in Sources */,
+				869646DB2353AC1900798521 /* Log.swift in Sources */,
 				861D20411F6FDE28006DEFA0 /* UserPresenter.swift in Sources */,
 				861D20321F6FBD4B006DEFA0 /* UIViewController.swift in Sources */,
-				861D203A1F6FC2D2006DEFA0 /* UIFont.swift in Sources */,
 				861D20291F6F508C006DEFA0 /* User.swift in Sources */,
 				861D20431F6FE252006DEFA0 /* String.swift in Sources */,
 				861D202E1F6FBD2B006DEFA0 /* Response.swift in Sources */,
@@ -584,7 +549,6 @@
 				861D20341F6FBD54006DEFA0 /* UIView.swift in Sources */,
 				863252331F70ABFA0014CE1C /* RepoView.swift in Sources */,
 				861D20231F6F4EA0006DEFA0 /* UserService.swift in Sources */,
-				861D20211F6F4D78006DEFA0 /* DefaultsKey.swift in Sources */,
 				861D20251F6F4EB7006DEFA0 /* RepositoryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

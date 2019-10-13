@@ -34,7 +34,7 @@ class ReposityService {
                     }
                     
                 case let .error(error):
-                    log.error(error)
+                    Log.put(error, type: .error)
                     callback(false, nil, ErrorMessage.unknownAPIError)
                 }
             }

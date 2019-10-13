@@ -23,9 +23,9 @@ class RepoListViewCell: UITableViewCell {
         contentView.backgroundColor = .clear
         self.backgroundColor = .clear
         
-        repoNameLabel.font = UIFont.medium(size: 14)
-        repoDescriptionLabel.font = UIFont.regular(size: 12)
-        ownerLabel.font = UIFont.medium(size: 11)
+        repoNameLabel.font = .boldSystemFont(ofSize: 14)
+        repoDescriptionLabel.font = .systemFont(ofSize: 12)
+        ownerLabel.font = .boldSystemFont(ofSize: 11)
         
         ownerLabel.textColor = .blueText
         repoDescriptionLabel.textColor = .gray
@@ -39,11 +39,4 @@ class RepoListViewCell: UITableViewCell {
         self.repoDescriptionLabel.text = repo.description ?? "..."
         self.ownerLabel.text = "By " + (repo.owner?.username ?? "...")
     }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

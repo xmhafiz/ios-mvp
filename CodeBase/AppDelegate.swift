@@ -8,11 +8,6 @@
 
 import UIKit
 
-import XCGLogger
-import IQKeyboardManagerSwift
-
-var log: XCGLogger!
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -21,10 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         setupAppearance()
-        // Log config
-        configLogger()
-        // Adding IQKeyboard
-        IQKeyboardManager.shared.enable = true
         
         return true
     }
@@ -36,37 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [
             NSAttributedString.Key.foregroundColor : UIColor.white,
-            NSAttributedString.Key.font: UIFont.medium(size: 16)
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)
         ]
         
         UIBarButtonItem.appearance().setTitleTextAttributes([
             NSAttributedString.Key.foregroundColor : UIColor.white,
-            NSAttributedString.Key.font: UIFont.medium(size: 14)
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)
             ], for: UIControl.State())
         
-    }
-    
-    func configLogger() {
-        // Create a logger object with no destinations
-        log = XCGLogger(identifier: "advancedLogger", includeDefaultDestinations: false)
-        
-        // Create a destination for the system console log (via NSLog)
-        let systemDestination = AppleSystemLogDestination(identifier: "advancedLogger.systemDestination")
-        
-        // Optionally set some configuration options
-        systemDestination.outputLevel = .debug
-        systemDestination.showLogIdentifier = false
-        systemDestination.showFunctionName = true
-        systemDestination.showThreadName = true
-        systemDestination.showLevel = true
-        systemDestination.showFileName = true
-        systemDestination.showLineNumber = true
-        systemDestination.showDate = true
-        
-        // Add the destination to the logger
-        log.add(destination: systemDestination)
-        
-        log.logAppDetails()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
