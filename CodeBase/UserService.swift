@@ -21,7 +21,7 @@ class UserService {
                 switch event {
                 case let .success(response):
                     
-                    log.debug(response)
+                    Log.put(response)
                     
                     if response.success {
                         // on success, map to object
@@ -36,7 +36,7 @@ class UserService {
                     }
                     
                 case let .error(error):
-                    log.error(error)
+                    Log.put(error, type: .error)
                     callback(false, nil, ErrorMessage.unknownAPIError)
                 }
                 
@@ -65,7 +65,7 @@ class UserService {
                     }
                     
                 case let .error(error):
-                    log.error(error)
+                    Log.put(error, type: .error)
                     callback(false, nil, ErrorMessage.unknownAPIError)
                 }
                 

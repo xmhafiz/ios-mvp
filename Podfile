@@ -12,10 +12,7 @@ target 'CodeBase' do
     pod 'ObjectMapper', '~> 3.5'
     
     # Common libraries
-    pod 'IQKeyboardManagerSwift'
     pod 'SDWebImage'
-    pod 'SwiftyUserDefaults'
-    pod 'XCGLogger', '~> 7.0'
     
     target 'CodeBaseTests' do
         inherit! :search_paths

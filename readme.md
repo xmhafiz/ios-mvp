@@ -10,14 +10,12 @@ iOS project in swift with MVP (Model-View-Presenter) architecture with Moya, RxS
 - Architecture: MVP (Model-View-Presenter) + Data Services
 - Xcode 10+
 - Support iOS 9+
-- Swift 4
+- Swift 5
 - Cocoapods
 
 ### Common Pods
 - [Moya+Rx](https://github.com/Moya/Moya)
 - [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper)
-- UserDefaults with [SwiftyUserDefaults](https://github.com/radex/SwiftyUserDefaults)
-- [IQKeyboardManagerSwift](https://github.com/hackiftekhar/IQKeyboardManager) 
 
 ### Current Feature:
 - Github users page

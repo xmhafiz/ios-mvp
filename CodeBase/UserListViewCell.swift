@@ -24,7 +24,7 @@ class UserListViewCell: UITableViewCell {
         contentView.backgroundColor = .clear
         self.backgroundColor = .clear
         
-        nameLabel.font = UIFont.medium(size: 14)
+        nameLabel.font = .boldSystemFont(ofSize: 14)
         
         innerView.rounded(radius: 4)
         profileImageView.rounded(radius: 56/2, borderWidth: 2, borderColor: .lightGray)
@@ -36,11 +36,4 @@ class UserListViewCell: UITableViewCell {
         self.nameLabel.text = user.username ?? "..."
         self.profileImageView.sd_setImage(with: user.avatarURL?.url, placeholderImage: #imageLiteral(resourceName: "placeholder"), completed: nil)
     }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

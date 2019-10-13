@@ -16,7 +16,7 @@ extension Response {
             return json
         }
         catch let error as NSError {
-            log.error(error)
+            Log.put(error, type: .error)
         }
         
         return nil

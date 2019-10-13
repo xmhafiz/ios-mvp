@@ -8,7 +8,6 @@
 
 import Foundation
 import Moya
-import SwiftyUserDefaults
 
 // define all endpoints
 // https://github.com/Moya/Moya/blob/master/docs/Examples/Basic.md
@@ -126,6 +125,6 @@ extension GithubAPIService: TargetType {
 public func url(route: TargetType) -> String {
     let url = route.baseURL.appendingPathComponent(route.path).absoluteString
     
-    log.debug(url)
+    Log.put(url)
     return url
 }
