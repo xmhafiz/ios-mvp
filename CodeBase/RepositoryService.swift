@@ -15,7 +15,7 @@ class ReposityService {
     
     static func getData(callback:@escaping (Bool, [Repo]?, String?) -> Void) {
         moyaProvider.rx
-            .request(GithubAPIService.getRepositories())
+            .request(GithubAPIService.getRepositories)
             .subscribe { event in
                 
                 switch event {

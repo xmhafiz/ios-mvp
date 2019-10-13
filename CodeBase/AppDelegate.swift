@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         setupAppearance()
         // Log config
@@ -35,14 +35,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColor.navbar
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [
-            NSAttributedStringKey.foregroundColor : UIColor.white,
-            NSAttributedStringKey.font: UIFont.medium(size: 16)
+            NSAttributedString.Key.foregroundColor : UIColor.white,
+            NSAttributedString.Key.font: UIFont.medium(size: 16)
         ]
         
         UIBarButtonItem.appearance().setTitleTextAttributes([
-            NSAttributedStringKey.foregroundColor : UIColor.white,
-            NSAttributedStringKey.font: UIFont.medium(size: 14)
-            ], for: UIControlState())
+            NSAttributedString.Key.foregroundColor : UIColor.white,
+            NSAttributedString.Key.font: UIFont.medium(size: 14)
+            ], for: UIControl.State())
         
     }
     
