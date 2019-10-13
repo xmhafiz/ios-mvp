@@ -21,10 +21,10 @@ let moyaProvider = MoyaProvider<GithubAPIService>()
 
 enum GithubAPIService {
     case auth(username: String, password: String)
-    case getUsers()
+    case getUsers
     case getUser(username: String)
     case search(keyword: String, sortBy: String?, orderBy: String?)
-    case getRepositories()
+    case getRepositories
 }
 
 
