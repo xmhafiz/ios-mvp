@@ -400,18 +400,18 @@
 					861D1FE31F6F45AB006DEFA0 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = UTAKMP8X5D;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1200;
 						ProvisioningStyle = Automatic;
 					};
 					861D1FF71F6F45AB006DEFA0 = {
 						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1200;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 861D1FE31F6F45AB006DEFA0;
 					};
 					861D20021F6F45AB006DEFA0 = {
 						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1200;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 861D1FE31F6F45AB006DEFA0;
 					};
@@ -422,6 +422,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -528,7 +529,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CodeBase/Pods-CodeBase-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CodeBase/Pods-CodeBase-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -559,7 +560,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CodeBase/Pods-CodeBase-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CodeBase/Pods-CodeBase-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -751,7 +752,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.CodeBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -767,7 +768,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.CodeBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -782,7 +783,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.CodeBaseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeBase.app/CodeBase";
 			};
 			name = Debug;
@@ -798,7 +799,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.CodeBaseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeBase.app/CodeBase";
 			};
 			name = Release;
@@ -813,7 +814,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.CodeBaseUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = CodeBase;
 			};
 			name = Debug;
@@ -828,7 +829,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.CodeBaseUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = CodeBase;
 			};
 			name = Release;

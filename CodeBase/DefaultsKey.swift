@@ -9,6 +9,6 @@
 import SwiftyUserDefaults
 
 extension DefaultsKeys {
-    static let authToken = DefaultsKey<String?>("authToken")
-    static let username = DefaultsKey<String>("username")
+    static let authToken = DefaultsKey<String?>.init("authToken")
+    static let username = DefaultsKey<String>.init("username", defaultValue: "")
 }

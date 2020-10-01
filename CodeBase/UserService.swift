@@ -15,7 +15,7 @@ class UserService {
     
     static func getUsers(callback:@escaping (Bool, [User]?, String?) -> Void) {
         moyaProvider.rx
-            .request(GithubAPIService.getUsers())
+            .request(GithubAPIService.getUsers)
             .subscribe { event in
                 
                 switch event {
