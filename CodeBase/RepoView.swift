@@ -47,7 +47,7 @@ class RepoView: UIViewController {
         
         // setup tableview
         tableView.estimatedRowHeight = RepoListViewCell.rowHeight
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.backgroundColor = .clear
         tableView.dataSource = self
         tableView.delegate = self
