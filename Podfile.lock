@@ -15,11 +15,11 @@ PODS:
   - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
   - RxSwift (4.5.0)
-  - SDWebImage (5.9.2):
-    - SDWebImage/Core (= 5.9.2)
-  - SDWebImage/Core (5.9.2)
-  - SwiftyJSON (5.0.0)
-  - SwiftyUserDefaults (5.0.0)
+  - SDWebImage (5.12.0):
+    - SDWebImage/Core (= 5.12.0)
+  - SDWebImage/Core (5.12.0)
+  - SwiftyJSON (5.0.1)
+  - SwiftyUserDefaults (5.3.0)
   - XCGLogger (6.1.0):
     - XCGLogger/Core (= 6.1.0)
   - XCGLogger/Core (6.1.0):
@@ -60,11 +60,11 @@ SPEC CHECKSUMS:
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
-  SDWebImage: 0b42b8719ab0c5257177d5894306e8a336b21cbb
-  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
-  SwiftyUserDefaults: 33fcb42bd1feb53a37d873feb62c82967db5f7f6
+  SDWebImage: 4ea20cca2986adc5aacde07aa686742fd4c67a37
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
   XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
 
 PODFILE CHECKSUM: d27ff6773787fba450a481164324599942fff50b
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1
